@@ -12,4 +12,8 @@ public class Hero {
     public Hero() {
         this("名前は未登録！");
     }
+
+    public void run() {
+        System.out.println(this.name + "は逃げ出した！");
+    }
 }

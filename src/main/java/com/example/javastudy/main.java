@@ -20,5 +20,10 @@ public class main {
         Hero subHero = new Hero("subHero");
         System.out.println(hero.name);
         System.out.println(subHero.name);
+        hero.run();
+        subHero.run();
+
+        SuperHero superHero = new SuperHero("superHero");
+        superHero.run();
     }
 }
