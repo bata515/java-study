@@ -1,6 +1,6 @@
 package com.example.javastudy;
 
-public class Hero {
+public abstract class Hero {
     String name;
     int hp;
 
@@ -16,4 +16,9 @@ public class Hero {
     public void run() {
         System.out.println(this.name + "は逃げ出した！");
     }
+
+    /**
+     * 抽象メソッド学習用
+     */
+    public abstract void attack();
 }
