@@ -1,4 +1,4 @@
-package com.example.javastudy;
+package com.example.javastudy.characters;
 
 public abstract class Hero {
     String name;
@@ -21,4 +21,5 @@ public abstract class Hero {
      * 抽象メソッド学習用
      */
     public abstract void attack();
+
 }

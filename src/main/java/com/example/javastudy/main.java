@@ -1,5 +1,10 @@
 package com.example.javastudy;
 
+import com.example.javastudy.characters.Hero;
+import com.example.javastudy.characters.SuperHero;
+
+import java.util.Objects;
+
 public class main {
     public static void main(String[] args) {
         System.out.println("Hello world.");
@@ -35,5 +40,8 @@ public class main {
         SuperHero.changeName(superHero,"hoge");
         superHero.run();
         //多態性は配列や引数で子クラスを親クラスとしてざっくりとらえてまとめて扱うことができる。便利！
+
+        //どんなオブジェクトでも自動で継承されているObject.toString()が呼び出せるのか検証。
+        System.out.println(superHero.toString());
     }
 }

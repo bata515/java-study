@@ -1,7 +1,7 @@
-package com.example.javastudy;
+package com.example.javastudy.characters;
 
 public class SuperHero extends Hero {
-    boolean flying = false;
+   private boolean flying = false;
 
     public SuperHero() {
         super();
@@ -11,6 +11,7 @@ public class SuperHero extends Hero {
         super(name);
     }
 
+    //getter/setterみたいな命名ではないがこれもカプセル化
     public void  fly() {
         flying = true;
     }
