@@ -3,7 +3,10 @@ package com.example.javastudy;
 import com.example.javastudy.characters.Hero;
 import com.example.javastudy.characters.SuperHero;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
+import java.util.Date;
 
 public class main {
     public static void main(String[] args) {
@@ -147,6 +150,28 @@ public class main {
             }
         }
         System.out.println("3文字以上の果物: " + longNameFruits);
+
+        // ========== ファイル操作の復習（try-with-resources） ==========
+        System.out.println("\n=== ファイル書き込み ===");
+        
+        // try-with-resources文でファイル書き込み
+        try (FileWriter fw = new FileWriter("src/main/java/com/example/javastudy/test.md")) {
+            fw.write("# Java学習メモ\n\n");
+            fw.write("## 学習した内容\n");
+            fw.write("- 参照型とプリミティブ型の違い\n");
+            fw.write("- 継承と多態性\n");
+            fw.write("- Objects.equals()メソッドの使用\n");
+            fw.write("- コレクション（List, Set, Map）の操作\n");
+            fw.write("- try-with-resources文でのリソース管理\n\n");
+            fw.write("## 今日の発見\n");
+            fw.write("try-with-resources文を使うことで、リソースの自動クローズができて安全！\n");
+            fw.write("\n作成日時: " + new Date() + "\n");
+            
+            System.out.println("test.mdファイルにJava学習メモを書き込みました！");
+            throw new IllegalAccessException("引数エラーはないがテストで実施");
+        } catch (Exception e) {
+            System.err.println("ファイル書き込みエラー: " + e.getMessage());
+        }
 
 
     }
